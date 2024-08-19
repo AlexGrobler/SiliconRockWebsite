@@ -1,0 +1,18 @@
+﻿<p class="overlay-header-text">@Header</p>
+<div class="overlay-text">
+    @Text
+</div>
+<div class="link-container">
+    <p href="" class="overlay-link">@LinkText</p>
+</div>
+
+@code {
+    [Parameter]
+    public string Header { get; set; } = "";
+
+    [Parameter]
+    public string Text { get; set; } = "";
+
+    [Parameter]
+    public string LinkText { get; set; } = "Find Out More";
+}

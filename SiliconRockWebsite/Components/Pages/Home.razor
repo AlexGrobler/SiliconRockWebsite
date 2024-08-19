@@ -1,7 +1,15 @@
-﻿@inject IStringLocalizer<Resource> locales
+﻿@attribute [StreamRendering]
+@inject IStringLocalizer<Resource> locales
 
 @page "/"
 
-<ImageOverlay ImageSrc="/images/banner/640-ban_5.png" Header=@locales["HomeAboutHeader"] Text=@locales["HomeAboutText"]></ImageOverlay>
-<ImageOverlay ImageSrc="/images/banner/640-ban_10.png" Header=@locales["HomeSolutionsHeader"] Text="@locales["HomeSolutionsText"]"></ImageOverlay>
-<ImageOverlay ImageSrc="/images/banner/640-ban_7.png" Header=@locales["HomeContactHeader"] Text="@locales["HomeContactText"]"></ImageOverlay>
+
+<ImageOverlayComponent ImageSrc="/images/banner/640-ban_5.png">
+           <AboutComponent Header=@locales["HomeAboutHeader"] Text=@locales["HomeAboutText"] LinkText="Learn More" />
+</ImageOverlayComponent>
+
+<ImageOverlayComponent ImageSrc="/images/banner/640-ban_10.png">
+    <SolutionsComponent Header=@locales["HomeSolutionsHeader"] Text=@locales["HomeSolutionsText"] LinkText="Find Out More" />
+</ImageOverlayComponent>
+
+<ImageOverlayComponent ImageSrc="/images/banner/640-ban_7.png" Header=@locales["HomeContactHeader"] Text="@locales["HomeContactText"]"></ImageOverlayComponent>

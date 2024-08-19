@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="HomeAboutHeader" xml:space="preserve">
-    <value>About Us</value>
+    <value>Who We Are</value>
   </data>
   <data name="HomeAboutText" xml:space="preserve">
     <value>SiliconRock is an Irish company of expert software engineers and graphic designers. We offer professional software applications and digital solutions that allow our clients to achieve greater operational efficiency.</value>
@@ -133,6 +133,6 @@
     <value>Our Solutions Are Based On 3 Core Values:</value>
   </data>
   <data name="HomeSolutionsText" xml:space="preserve">
-    <value>|1) Custom, tailored solutions to suit your unique needs|2) Robust solutions that are dynamic and easily maintainable to allow future growth|3) Client-centric and affordable solutions</value>
+    <value>Custom, tailored solutions to suit your unique needs|Robust solutions that are dynamic and easily maintainable to allow future growth|Client-centric and affordable solutions</value>
   </data>
 </root>

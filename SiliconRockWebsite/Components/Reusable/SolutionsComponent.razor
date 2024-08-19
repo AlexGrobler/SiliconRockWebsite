@@ -1,0 +1,64 @@
+﻿@if (_strings != null && _strings.Length > 0)
+{
+    <div class="container-fluid">
+        <div class="row">
+            @for (int i = 0; i < _strings.Length; i++)
+            {
+
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card mx-auto text-center">
+                        <img class="card-img-top" src="@GetImageString(i)" alt="">
+                        <div class="card-body">
+                            <p class="card-text">@_strings[i]</p>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+}
+else
+{
+    <p style="color: white">Loading...</p> 
+}
+
+@code {
+    [Parameter]
+    public string Header { get; set; } = "";
+
+    [Parameter]
+    public string Text { get; set; } = "";
+
+    [Parameter]
+    public string LinkText { get; set; } = "Find Out More";
+
+    private string[] _strings;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _strings = await InitializeStringsAsync(Text);
+    }
+
+    private async Task<string[]> InitializeStringsAsync(string text)
+    {
+        return await Task.Run(() => text.Split('|'));
+    }
+
+
+    protected string GetImageString(int i)
+    {
+        var baseString = "/images/navbar/";
+
+        switch (i)
+        {
+            case 0:
+                return baseString + "About-icon.svg";
+            case 1:
+                return baseString + "Contact-icon.svg";
+            case 2:
+            default:
+                return baseString +"Solution-icon.svg";
+        }
+    }
+}

@@ -1,0 +1,38 @@
+﻿<div class="img-overlay-container">
+    <img src="@ImageSrc" alt="" class="img-overlay" style="height:100%;" />
+    <div class="txt-overlay-pos">
+
+        @if (ChildContent != null)
+        {
+            @ChildContent
+        }
+        else
+        {
+            <p class="overlay-header-text">@Header</p>
+            <div class="overlay-text">
+                @Text
+            </div>
+            <div class="link-container">
+                <p href="" class="overlay-link">@LinkText</p>
+            </div>
+        }
+    </div>
+
+</div>
+
+@code {
+    [Parameter]
+    public string ImageSrc { get; set; } = "";
+
+    [Parameter]
+    public string Header { get; set; } = "";
+
+    [Parameter]
+    public string Text { get; set; } = "";
+
+    [Parameter]
+    public string LinkText { get; set; } = "Find Out More";
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

@@ -1,21 +1,16 @@
 ﻿@if (_strings != null && _strings.Length > 0)
 {
-    <div class="container-fluid">
-        <div class="row">
-            @for (int i = 0; i < _strings.Length; i++)
-            {
-
-                <div class="col-6 col-md-4 col-lg-3 mb-4">
-                    <div class="card mx-auto text-center">
-                        <img class="card-img-top" src="@GetImageString(i)" alt="">
-                        <div class="card-body">
-                            <p class="card-text">@_strings[i]</p>
-                        </div>
-                    </div>
+    <div class="card-container">
+        @for (int i = 0; i < _strings.Length; i++)
+        {
+            <a class="custom-card" href="">
+                <img class="custom-card-image" src="@GetImageString(i)" alt="">
+                <div class="custom-card-text">
+                    <p class="">@_strings[i]</p>
                 </div>
+            </a>
 
-            }
-        </div>
+        }
     </div>
 }
 else
@@ -48,17 +43,17 @@ else
 
     protected string GetImageString(int i)
     {
-        var baseString = "/images/navbar/";
+        var baseString = "/images/icons/";
 
         switch (i)
         {
             case 0:
-                return baseString + "About-icon.svg";
+                return baseString + "About.svg";
             case 1:
-                return baseString + "Contact-icon.svg";
+                return baseString + "Solutions.svg";
             case 2:
             default:
-                return baseString +"Solution-icon.svg";
+                return baseString + "Contact.svg";
         }
     }
 }

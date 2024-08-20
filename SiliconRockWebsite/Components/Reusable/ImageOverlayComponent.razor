@@ -1,6 +1,6 @@
 ﻿<div class="img-overlay-container">
-    <img src="@ImageSrc" alt="" class="img-overlay" style="height:100%;" />
-    <div class="txt-overlay-pos">
+    <img src="@ImageSrc" alt="" class="img-overlay @(SpecialStyle)" />
+    <div class="txt-overlay-pos @(SpecialStyle)">
 
         @if (ChildContent != null)
         {
@@ -32,6 +32,9 @@
 
     [Parameter]
     public string LinkText { get; set; } = "Find Out More";
+
+    [Parameter]
+    public string SpecialStyle { get; set; } = "";
 
     [Parameter]
     public RenderFragment? ChildContent { get; set; }

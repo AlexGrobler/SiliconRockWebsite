@@ -1,3 +1,71 @@
+@keyframes scale-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    flex-direction: row;
+    max-width: 95vw;
+}
+
+.custom-card {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    width: 25vw;
+    height: 18vw;
+    min-height: 20em;
+    min-width: 150px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 1s ease-in-out;
+}
+
+    .custom-card:hover {
+        background-color: antiquewhite;
+    }
+
+.custom-card-text {
+    font-size: 1.4em;
+    justify-self: center;
+    align-self: center;
+    margin: 40px;
+    transition: all 0.5s ease-in-out;
+}
+
+    .custom-card:hover .custom-card-text {
+        transform: scale(1.025);
+    }
+
+.custom-card-image {
+    max-height: auto;
+    max-width: 8vw;
+    min-width: 90px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    justify-self: center;
+    align-self: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.custom-card:hover .custom-card-image {
+    transform: scale(1.05);
+}
+
 .img-overlay-container {
     position: relative;
     text-align: center;
@@ -11,14 +79,26 @@
     height: 100%;
     object-fit: cover;
     min-height: 500px;
+    animation: scale-animation 40s infinite ease-in-out;
+    animation-play-state: paused;
+}
+
+.img-overlay-container:hover .img-overlay {
+    animation-play-state: running;
 }
 
 .txt-overlay-pos {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: rgb(215, 215, 215, 0.1);
+    border-radius: 5px;
 }
+
+    .txt-overlay-pos.cards {
+        background-color: rgb(215, 215, 215, 0);
+    }
 
 .header-overlay-pos {
     position: absolute;
@@ -30,7 +110,7 @@
 .overlay-header-text {
     font-size: 3em;
     padding-bottom: 2vw;
-    padding-top: 5vw;
+    padding-top: 2vw;
     color: white;
 }
 
@@ -53,11 +133,11 @@
     transition: all .25s ease-in-out;
 }
 
-.overlay-link:hover {
-    color: orange;
-    cursor:pointer;
-    transform: scale(1.025); 
-}
+    .overlay-link:hover {
+        color: orange;
+        cursor: pointer;
+        transform: scale(1.025);
+    }
 
 .invalid {
     outline: 1px solid #e50000;
@@ -81,7 +161,13 @@
     border-color: #929292;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
+    .custom-card-text {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 1150px) {
     .overlay-header-text {
         font-size: 2.5em;
     }
@@ -89,11 +175,18 @@
     .txt-overlay-pos {
         top: 50%;
         width: 80%;
-        background-color: blue;
+    }
+
+    .custom-card-text {
+        margin: 20px;
+    }
+
+    .custom-card-text {
+        font-size: 1.15em;
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 798px) {
     .overlay-header-text {
         font-size: 2em;
     }
@@ -105,6 +198,33 @@
     .txt-overlay-pos {
         top: 50%;
         width: 80%;
-        background-color: red;
     }
+
+    .custom-card-text {
+        margin: 5px;
+        font-size: 1.15em;
+    }
+
+    .custom-card-image {
+        margin-top: 20px;
+    }
+
+    .card-container {
+        gap: 5%;
+        flex-direction: column;
+        flex-direction: column;
+    }
+
+    .custom-card {
+        width: 60vw;
+        height: 50vw;
+        min-height: 0em;
+        min-width: 0px;
+        margin: 2%;
+    }
+
+    .img-overlay.cards {
+        min-height: 850px;
+    }
+
 }

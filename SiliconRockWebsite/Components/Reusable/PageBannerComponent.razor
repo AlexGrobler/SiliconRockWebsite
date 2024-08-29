@@ -1,0 +1,17 @@
+﻿<div class="img-overlay-container">
+    <img src="@ImageSrc" alt="" class="img-overlay @(SpecialStyle)" />
+    <div class="txt-overlay-pos @(SpecialStyle)">
+        <p class="overlay-header-text">@Header</p>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string ImageSrc { get; set; } = "";
+
+    [Parameter]
+    public string Header { get; set; } = "";
+
+    [Parameter]
+    public string SpecialStyle { get; set; } = "";
+}

@@ -1,15 +1,66 @@
-@keyframes scale-animation {
-    0% {
-        transform: scale(1);
-    }
+.main-layout {
+    height: 100vh;
+    background-color: greenyellow;
+}
 
-    50% {
-        transform: scale(1.05);
-    }
+.page-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    background-color: orange;
+    height: calc(100vh - 76px);
+}
 
-    100% {
-        transform: scale(1);
-    }
+.page-content-container {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
+.content-text-box {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 50%;
+    background-color: yellow;
+    font-size: 1.1em;
+}
+
+.filler {
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    height: 100%;
+}
+
+.quick-contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 55px;
+    padding: 10px;
+}
+
+.quick-contact-item {
+    display: flex;
+    margin: 0px 10px 0px 0px;
+}
+
+.quick-contact-item-text {
+    margin: 0px 10px 0px 0px;
+}
+
+.quick-contact-item-link {
+    text-decoration: underline;
+    color: white;
+}
+
+.quick-contact-item-link:hover {
+    color:wheat
 }
 
 .card-container {
@@ -25,9 +76,9 @@
     display: flex;
     background-color: white;
     flex-direction: column;
-    width: 25vw;
-    height: 18vw;
-    min-height: 20em;
+    width: 22vw;
+    height: 15vw;
+    min-height: 19em;
     min-width: 150px;
     border-radius: 15px;
     cursor: pointer;
@@ -43,8 +94,8 @@
     font-size: 1.4em;
     justify-self: center;
     align-self: center;
-    margin: 40px;
-    transition: all 0.5s ease-in-out;
+    margin: 20px;
+    transition: all 0.25s ease-in-out;
 }
 
     .custom-card:hover .custom-card-text {
@@ -55,11 +106,11 @@
     max-height: auto;
     max-width: 8vw;
     min-width: 90px;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 10px;
     justify-self: center;
     align-self: center;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 .custom-card:hover .custom-card-image {
@@ -79,11 +130,21 @@
     height: 100%;
     object-fit: cover;
     min-height: 500px;
-    animation: scale-animation 40s infinite ease-in-out;
+    animation: scale-animation 25s infinite ease-in-out;
     animation-play-state: paused;
 }
 
 .img-overlay-container:hover .img-overlay {
+    animation-play-state: running;
+}
+
+.img-overlay.about-page {
+    height: 155em;
+    width: 100%;
+    opacity: 50%;
+    min-height: 0px;
+    max-height: 700px;
+    animation: scale-animation 15s infinite ease-in-out;
     animation-play-state: running;
 }
 
@@ -94,9 +155,14 @@
     transform: translate(-50%, -50%);
     background-color: rgb(215, 215, 215, 0.1);
     border-radius: 5px;
+    padding: 25px;
 }
 
     .txt-overlay-pos.cards {
+        background-color: rgb(215, 215, 215, 0);
+    }
+
+    .txt-overlay-pos.about-page {
         background-color: rgb(215, 215, 215, 0);
     }
 
@@ -134,7 +200,7 @@
 }
 
     .overlay-link:hover {
-        color: orange;
+        color: wheat;
         cursor: pointer;
         transform: scale(1.025);
     }
@@ -161,9 +227,34 @@
     border-color: #929292;
 }
 
+@keyframes scale-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
 @media screen and (max-width: 1200px) {
     .custom-card-text {
         font-size: 1.3em;
+    }
+}
+
+@media screen and (min-width: 2100px) {
+    .custom-card {
+        width: 18vw;
+        height: 14vw;
+        min-height: 0em;
+        min-width: 0px;
     }
 }
 
@@ -216,8 +307,8 @@
     }
 
     .custom-card {
-        width: 60vw;
-        height: 50vw;
+        width: 80%;
+        height: 30%;
         min-height: 0em;
         min-width: 0px;
         margin: 2%;
@@ -226,5 +317,18 @@
     .img-overlay.cards {
         min-height: 850px;
     }
+}
 
+@media screen and (max-width: 730px) {
+    .quick-contact-item {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .quick-contact-container {
+        flex-direction: column;
+        height: 100%;
+        text-align: right;
+    }
 }

@@ -1,0 +1,17 @@
+﻿<div class="page-container">
+    <PageBannerComponent ImageSrc=@ImageSrc SpecialStyle="about-page" Header=@Header></PageBannerComponent>
+    <PageContentComponent MainText=@MainText></PageContentComponent>
+    <div class="filler"></div>
+    <QuickContactComponent />
+</div>
+
+@code {
+    [Parameter]
+    public string ImageSrc { get; set; } = "";
+
+    [Parameter]
+    public string Header { get; set; } = "";
+
+    [Parameter]
+    public string MainText { get; set; } = "";
+}

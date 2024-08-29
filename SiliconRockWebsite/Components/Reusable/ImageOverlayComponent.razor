@@ -1,7 +1,6 @@
 ﻿<div class="img-overlay-container">
     <img src="@ImageSrc" alt="" class="img-overlay @(SpecialStyle)" />
     <div class="txt-overlay-pos @(SpecialStyle)">
-
         @if (ChildContent != null)
         {
             @ChildContent
@@ -13,11 +12,10 @@
                 @Text
             </div>
             <div class="link-container">
-                <p href="" class="overlay-link">@LinkText</p>
+                <a href=@LinkRoute class="overlay-link">@LinkText</a>
             </div>
         }
     </div>
-
 </div>
 
 @code {
@@ -29,6 +27,9 @@
 
     [Parameter]
     public string Text { get; set; } = "";
+
+    [Parameter]
+    public string LinkRoute { get; set; } = "";
 
     [Parameter]
     public string LinkText { get; set; } = "Find Out More";

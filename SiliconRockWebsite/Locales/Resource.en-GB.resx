@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutPageText" xml:space="preserve">
+    <value>We are an Irish owned software development and digital solution company that was established in 2012 and are situated in County Wicklow, Ireland.|We have software development experience in various technologies and offer cross-platform development services and support to both Irish and international clients.|We are a small expert in-house team, whose scalable adaptive work model of utilising highly qualified remote specialist in different fields, enable us to bring to table the latest developmental expertise to deliver high quality custom solutions.|By teaming-up with well-established remote developers, we can assess each individual project’s unique requirements in terms of scope of work and skills needed and bring together a perfect-fit development team. Our business model allows us to perform with increased productivity so that we can offer you cost-efficient products that is built on the latest technologies and platforms.</value>
+  </data>
+  <data name="CompanyText" xml:space="preserve">
+    <value>Silicone Rock Ltd</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>info@siliconrock.ie</value>
+  </data>
+  <data name="EmailText" xml:space="preserve">
+    <value>Email:</value>
+  </data>
   <data name="HomeAboutHeader" xml:space="preserve">
     <value>Who We Are</value>
   </data>
@@ -134,5 +146,17 @@
   </data>
   <data name="HomeSolutionsText" xml:space="preserve">
     <value>Custom, tailored solutions to suit your unique needs|Robust solutions that are dynamic and easily maintainable to allow future growth|Client-centric and affordable solutions</value>
+  </data>
+  <data name="MobileNumber" xml:space="preserve">
+    <value>+353 87 681 4211</value>
+  </data>
+  <data name="MobileText" xml:space="preserve">
+    <value>Mobile:</value>
+  </data>
+  <data name="TelNumber" xml:space="preserve">
+    <value>+353 1 201 1041</value>
+  </data>
+  <data name="TelText" xml:space="preserve">
+    <value>Telephone</value>
   </data>
 </root>

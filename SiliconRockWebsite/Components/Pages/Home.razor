@@ -5,11 +5,13 @@
 
 
 <ImageOverlayComponent ImageSrc="/images/banner/640-ban_5.png">
-           <AboutComponent Header=@locales["HomeAboutHeader"] Text=@locales["HomeAboutText"] LinkText="Learn More" />
+           <AboutComponent Header=@locales["HomeAboutHeader"] Text=@locales["HomeAboutText"] LinkRoute="/about" />
 </ImageOverlayComponent>
 
 <ImageOverlayComponent ImageSrc="/images/banner/640-ban_10.png" SpecialStyle="cards">
-    <SolutionsComponent Header=@locales["HomeSolutionsHeader"] Text=@locales["HomeSolutionsText"] LinkText="Find Out More" />
+    <SolutionsComponent Header=@locales["HomeSolutionsHeader"] Text=@locales["HomeSolutionsText"] LinkRoute="/solutions" />
 </ImageOverlayComponent>
 
-<ImageOverlayComponent ImageSrc="/images/banner/640-ban_7.png" Header=@locales["HomeContactHeader"] Text="@locales["HomeContactText"]"></ImageOverlayComponent>
+<ImageOverlayComponent ImageSrc="/images/banner/640-ban_7.png" Header=@locales["HomeContactHeader"] Text="@locales["HomeContactText"]" LinkRoute="/contact"></ImageOverlayComponent>
+
+<QuickContactComponent />

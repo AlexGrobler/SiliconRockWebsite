@@ -3,13 +3,12 @@
     <div class="card-container">
         @for (int i = 0; i < _strings.Length; i++)
         {
-            <a class="custom-card" href="">
+            <a class="custom-card" href=@LinkRoute>
                 <img class="custom-card-image" src="@GetImageString(i)" alt="">
                 <div class="custom-card-text">
                     <p class="">@_strings[i]</p>
                 </div>
             </a>
-
         }
     </div>
 }
@@ -26,20 +25,14 @@ else
     public string Text { get; set; } = "";
 
     [Parameter]
-    public string LinkText { get; set; } = "Find Out More";
+    public string LinkRoute { get; set; } = "";
 
     private string[] _strings;
 
     protected override async Task OnParametersSetAsync()
     {
-        _strings = await InitializeStringsAsync(Text);
+        _strings = await Utils.InitializeStringsAsync(Text);
     }
-
-    private async Task<string[]> InitializeStringsAsync(string text)
-    {
-        return await Task.Run(() => text.Split('|'));
-    }
-
 
     protected string GetImageString(int i)
     {

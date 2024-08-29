@@ -1,0 +1,9 @@
+﻿@attribute [StreamRendering]
+@inject IStringLocalizer<Resource> locales
+@page "/about"
+
+<PageComponent ImageSrc="/images/banner/640-ban_6.png" Header=@locales["HomeAboutHeader"] MainText="@locales["AboutPageText"]" />
+
+@code {
+
+}

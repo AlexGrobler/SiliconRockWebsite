@@ -1,0 +1,23 @@
+﻿@inject IStringLocalizer<Resource> locales
+
+<div class="quick-contact-container">
+    <div class="quick-contact-item"> 
+        <div class="quick-contact-item-text">@locales["CompanyText"]</div>
+    </div>
+    <div class="quick-contact-item">
+        <div class="quick-contact-item-text">@locales["EmailText"]</div>
+        <a class="quick-contact-item-link" href="mailto:info@siliconrock.ie">@locales["EmailAddress"]</a>
+    </div>
+    <div class="quick-contact-item">
+        <div class="quick-contact-item-text">@locales["MobileText"]</div>
+        <a class="quick-contact-item-link" href="tel:+353876814211">@locales["MobileNumber"]</a>
+    </div>
+    <div class="quick-contact-item">
+        <div class="quick-contact-item-text">@locales["TelText"]:</div>
+        <a class="quick-contact-item-link" href="tel:+35312011041">@locales["TelNumber"]</a>
+    </div>
+</div>
+
+@code {
+
+}

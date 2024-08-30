@@ -1,7 +1,68 @@
-﻿@page "/contact"
+﻿@attribute [StreamRendering]
+@inject IStringLocalizer<Resource> locales
+@page "/contact"
 
-<h3>ContactPage</h3>
+<div class="page-container">
+    <PageBannerComponent ImageSrc="/images/banner/640-ban_7.png" SpecialStyle="content-page" Header=@locales["HomeAboutHeader"]></PageBannerComponent>
+    <div class="page-content-container">
+        <div class="content-text-box contact-page">
+            <img class="contact-img" src="/images/logo/SiliconRock-logo.svg" alt="" />
+            <div class="contact-info">
+                <div>
+                    @if (_address != null && _address.Length > 0)
+                    {
+                        @foreach (var text in _address)
+                        {
+                            <div>@text</div>
+                        }
+                    }
+                    <div style="margin-top: 1em;"> 
+                        @if (_companyDetails != null && _companyDetails.Length > 0)
+                        {
+                            @foreach (var text in _companyDetails)
+                            {
+                                <div>@text</div>
+                            }
+                        }
+                    </div>
+
+                </div>
+                <div class="contact-details">
+                    <div class="contact-item solutions-headers">
+                        <div class="contact-item-text">@locales["ContactTitle"]</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-text">@locales["OpeningHours"]</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-text">@locales["EmailText"]</div>
+                        <a class="contact-item-link" href="mailto:info@siliconrock.ie">@locales["EmailAddress"]</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-text">@locales["MobileText"]</div>
+                        <a class="contact-item-link" href="tel:+353876814211">@locales["MobileNumber"]</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-text">@locales["TelText"]:</div>
+                        <a class="contact-item-link" href="tel:+35312011041">@locales["TelNumber"]</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="filler"></div>
+    <QuickContactComponent />
+</div>
+
 
 @code {
 
+    private string[] _address = [];
+    private string[] _companyDetails = [];
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _address = await Utils.InitializeStringsAsync(locales["Address"]);
+        _companyDetails = await Utils.InitializeStringsAsync(locales["CompanyDetails"]);
+    }
 }

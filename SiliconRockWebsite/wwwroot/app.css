@@ -18,6 +18,41 @@
     animation-play-state: running;
 }
 
+.contact-img {
+    height: 2vw;
+    min-height: 40px;
+    align-self: start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 1em;
+    margin-top: 1em;
+    font-weight: 500;
+}
+
+.contact-item {
+    display: flex;
+    margin: 0px 10px 0px 0px;
+}
+
+.contact-item-text {
+    margin: 0px 10px 0px 0px;
+}
+
+.contact-item-link {
+    text-decoration: underline;
+    color: dodgerblue;
+}
+
+    .contact-item-link:hover {
+        color: lightblue
+    }
+
+
 .solutions-headers {
     background-color: rgb(20, 103, 178);
     background-image: linear-gradient(45deg, rgb(20, 103, 178), rgb(161, 255, 241));
@@ -321,6 +356,10 @@
     .custom-card-text {
         font-size: 1.3em;
     }
+
+    .content-text-box.contact-page {
+        width: 100%;
+    }
 }
 
 
@@ -387,13 +426,15 @@
     .content-text-box {
         width: 100%;
     }
+
+    .quick-contact-container {
+        flex-direction: column;
+        height: 100%;
+        text-align: right;
+    }
 }
 
 @media screen and (max-width: 730px) {
-    .quick-contact-item {
-        flex-direction: column;
-    }
-
     .solutions-headers {
         align-self: start;
     }
@@ -404,12 +445,18 @@
     .banner-image-container {
         min-height: 25vw;
     }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-details {
+        margin-top: 1em;
+    }
 }
 
 @media screen and (max-width: 590px) {
-    .quick-contact-container {
-        flex-direction: column;
-        height: 100%;
-        text-align: right;
-    }
+
 }

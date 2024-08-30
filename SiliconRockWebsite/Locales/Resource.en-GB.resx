@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutPageText" xml:space="preserve">
-    <value>We are an Irish owned software development and digital solution company that was established in 2012 and are situated in County Wicklow, Ireland.|We have software development experience in various technologies and offer cross-platform development services and support to both Irish and international clients.|We are a small expert in-house team, whose scalable adaptive work model of utilising highly qualified remote specialist in different fields, enable us to bring to table the latest developmental expertise to deliver high quality custom solutions.|By teaming-up with well-established remote developers, we can assess each individual project’s unique requirements in terms of scope of work and skills needed and bring together a perfect-fit development team. Our business model allows us to perform with increased productivity so that we can offer you cost-efficient products that is built on the latest technologies and platforms.</value>
+    <value>We are an Irish owned software development and digital solutions company that was established in 2012, located in County Wicklow, Ireland.|We have software development experience in various technologies and offer cross-platform development services and support to both Irish and international clients.|We are a small expert in-house team, whose scalable adaptive work model of utilising highly qualified remote specialist in different fields, enable us to bring the latest developmental expertise to the table to deliver high quality custom solutions.|By teaming-up with well-established remote developers, we can assess each individual project’s unique requirements in terms of scope of work and skills needed and bring together a perfect-fit development team. Our business model allows us to perform with increased productivity so that we can offer you cost-efficient products that is built on the latest technologies and platforms.</value>
   </data>
   <data name="Address" xml:space="preserve">
     <value>SiliconRock Limited,|6 Tinnapark Drive,|Kilpedder,|A63P621,|County Wicklow,|Republic of Ireland</value>
@@ -131,6 +131,9 @@
   </data>
   <data name="CompanyText" xml:space="preserve">
     <value>SiliconRock Limited</value>
+  </data>
+  <data name="ContactTitle" xml:space="preserve">
+    <value>Contact Details:</value>
   </data>
   <data name="EmailAddress" xml:space="preserve">
     <value>info@siliconrock.ie</value>
@@ -148,7 +151,7 @@
     <value>Contact Us</value>
   </data>
   <data name="HomeContactText" xml:space="preserve">
-    <value>Find out how to contact us so we can help you to optimise your productivity and streamline your business.</value>
+    <value>Find out how to contact us so we can help you optimise your productivity and streamline your business.</value>
   </data>
   <data name="HomeSolutionsHeader" xml:space="preserve">
     <value>Our Solutions Are Based On 3 Core Values:</value>
@@ -162,8 +165,11 @@
   <data name="MobileText" xml:space="preserve">
     <value>Mobile:</value>
   </data>
+  <data name="OpeningHours" xml:space="preserve">
+    <value>Mon-Fri 9:30 - 17:00</value>
+  </data>
   <data name="SolutionsPageHeader" xml:space="preserve">
-    <value>What We Provide</value>
+    <value>What We Offer</value>
   </data>
   <data name="SolutionsPageText" xml:space="preserve">
     <value>Scalable Adaptive Work Model:

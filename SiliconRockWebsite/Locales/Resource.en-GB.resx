@@ -120,8 +120,14 @@
   <data name="AboutPageText" xml:space="preserve">
     <value>We are an Irish owned software development and digital solution company that was established in 2012 and are situated in County Wicklow, Ireland.|We have software development experience in various technologies and offer cross-platform development services and support to both Irish and international clients.|We are a small expert in-house team, whose scalable adaptive work model of utilising highly qualified remote specialist in different fields, enable us to bring to table the latest developmental expertise to deliver high quality custom solutions.|By teaming-up with well-established remote developers, we can assess each individual project’s unique requirements in terms of scope of work and skills needed and bring together a perfect-fit development team. Our business model allows us to perform with increased productivity so that we can offer you cost-efficient products that is built on the latest technologies and platforms.</value>
   </data>
+  <data name="Address" xml:space="preserve">
+    <value>SiliconRock Limited,|6 Tinnapark Drive,|Kilpedder,|A63P621,|County Wicklow,|Republic of Ireland</value>
+  </data>
+  <data name="CompanyDetails" xml:space="preserve">
+    <value>CRO Company No: 509120,|VAT: IE9819359Q</value>
+  </data>
   <data name="CompanyText" xml:space="preserve">
-    <value>Silicone Rock Ltd</value>
+    <value>SiliconRock Limited</value>
   </data>
   <data name="EmailAddress" xml:space="preserve">
     <value>info@siliconrock.ie</value>

@@ -2,8 +2,54 @@
 @inject IStringLocalizer<Resource> locales
 @page "/about"
 
-<PageComponent ImageSrc="/images/banner/640-ban_6.png" Header=@locales["HomeAboutHeader"] MainText="@locales["AboutPageText"]" />
+<div class="page-container">
+    <PageBannerComponent ImageSrc="/images/banner/640-ban_6.png" SpecialStyle="content-page" Header=@locales["HomeAboutHeader"]></PageBannerComponent>
+    <div class="page-content-container">
+        <div class="content-text-box">
+            <img class="about-img" src="/images/logo/SiliconRock-logo.svg" alt="" />
+            @if (_mainText != null && _mainText.Length > 0)
+            {
+                @foreach (var text in _mainText)
+                {
+                    <p>@text</p>
+                }
+            }
+            <div class="about-details">
+                <div>
+                    @if (_address != null && _address.Length > 0)
+                    {
+                        @foreach (var text in _address)
+                        {
+                            <div>@text</div>
+                        }
+                    }
+                </div>
+                <div>
+                    @if (_companyDetails != null && _companyDetails.Length > 0)
+                    {
+                        @foreach (var text in _companyDetails)
+                        {
+                            <div>@text</div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="filler"></div>
+    <QuickContactComponent />
+</div>
+
 
 @code {
+    private string[] _mainText = [];
+    private string[] _address = [];
+    private string[] _companyDetails = [];
 
+    protected override async Task OnParametersSetAsync()
+    {
+        _mainText = await Utils.InitializeStringsAsync(locales["AboutPageText"]);
+        _address = await Utils.InitializeStringsAsync(locales["Address"]);
+        _companyDetails = await Utils.InitializeStringsAsync(locales["CompanyDetails"]);
+    }
 }

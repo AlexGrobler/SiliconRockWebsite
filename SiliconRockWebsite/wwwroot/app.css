@@ -1,6 +1,27 @@
 .main-layout {
     height: 100vh;
-    background-color: greenyellow;
+}
+
+.banner-image-container {
+    position: relative;
+    text-align: center;
+    background-color: rgb(0, 34, 64);
+    min-height: 15vw;
+    overflow: hidden;
+}
+
+.img-overlay.content-page {
+    width: 100%;
+    opacity: 50%;
+    min-height: 250px;
+    animation: scale-animation 35s infinite ease-in-out;
+    animation-play-state: running;
+}
+
+.about-img {
+    height: 3vw;
+    min-height: 50px;
+    margin-bottom: 25px;
 }
 
 .page-container {
@@ -9,14 +30,13 @@
     display: flex;
     flex-flow: column;
     flex-direction: column;
-    background-color: orange;
     height: calc(100vh - 76px);
 }
 
 .page-content-container {
+    margin: 5vh;
     display: flex;
     justify-content: center;
-    background-color: red;
 }
 
 .content-text-box {
@@ -24,15 +44,26 @@
     flex-direction: column;
     padding: 25px;
     width: 50%;
-    background-color: yellow;
+    background-color: rgb(245, 245, 245);
     font-size: 1.1em;
+    border-radius: 2.5px;
+    box-shadow: -2px 2px 5px rgb(159, 159, 159);
+}
+
+.about-details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin-top: 1em;
+    font-weight: 500;
 }
 
 .filler {
     display: flex;
     justify-content: center;
-    background-color: blue;
-    height: 100%;
+    height: 25%;
 }
 
 .quick-contact-container {
@@ -130,21 +161,11 @@
     height: 100%;
     object-fit: cover;
     min-height: 500px;
-    animation: scale-animation 25s infinite ease-in-out;
+    animation: scale-animation 15s infinite ease-in-out;
     animation-play-state: paused;
 }
 
 .img-overlay-container:hover .img-overlay {
-    animation-play-state: running;
-}
-
-.img-overlay.about-page {
-    height: 155em;
-    width: 100%;
-    opacity: 50%;
-    min-height: 0px;
-    max-height: 700px;
-    animation: scale-animation 15s infinite ease-in-out;
     animation-play-state: running;
 }
 
@@ -162,7 +183,7 @@
         background-color: rgb(215, 215, 215, 0);
     }
 
-    .txt-overlay-pos.about-page {
+    .txt-overlay-pos.content-page {
         background-color: rgb(215, 215, 215, 0);
     }
 
@@ -242,13 +263,6 @@
 }
 
 
-
-@media screen and (max-width: 1200px) {
-    .custom-card-text {
-        font-size: 1.3em;
-    }
-}
-
 @media screen and (min-width: 2100px) {
     .custom-card {
         width: 18vw;
@@ -256,7 +270,22 @@
         min-height: 0em;
         min-width: 0px;
     }
+    .filler {
+        height: 100%;
+    }
+
+    .banner-image-container {
+        min-height: 12vw;
+    }
+
 }
+
+@media screen and (max-width: 1200px) {
+    .custom-card-text {
+        font-size: 1.3em;
+    }
+}
+
 
 @media screen and (max-width: 1150px) {
     .overlay-header-text {
@@ -317,6 +346,10 @@
     .img-overlay.cards {
         min-height: 850px;
     }
+
+    .content-text-box {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 730px) {
@@ -330,5 +363,9 @@
         flex-direction: column;
         height: 100%;
         text-align: right;
+    }
+
+    .banner-image-container {
+        min-height: 25vw;
     }
 }

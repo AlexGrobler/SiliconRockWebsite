@@ -123,6 +123,9 @@
   <data name="Address" xml:space="preserve">
     <value>SiliconRock Limited,|6 Tinnapark Drive,|Kilpedder,|A63P621,|County Wicklow,|Republic of Ireland</value>
   </data>
+  <data name="BrandsTitle" xml:space="preserve">
+    <value>Technologies We Love</value>
+  </data>
   <data name="CompanyDetails" xml:space="preserve">
     <value>CRO Company No: 509120,|VAT: IE9819359Q</value>
   </data>
@@ -158,6 +161,30 @@
   </data>
   <data name="MobileText" xml:space="preserve">
     <value>Mobile:</value>
+  </data>
+  <data name="SolutionsPageHeader" xml:space="preserve">
+    <value>What We Provide</value>
+  </data>
+  <data name="SolutionsPageText" xml:space="preserve">
+    <value>Scalable Adaptive Work Model:
+At SiliconRock we know that a one-stop-shop does not allow for affordable future-proof solutions and have embraced a scalable adaptive work model by collaborating with remote developers.&lt;br&gt;&lt;br&gt;
+This allows us a more effective workflow with a faster time to operational stage without compromising quality. This scalable adaptive work model allows us to pass the dividends and benefits on to our clients.|
+
+Access to Specialists in their Field:
+We have a close working relationship with a talented pool of developers who have in-depth knowledge across various technology stacks and can draw on their niche skills to best suit your needs.&lt;br&gt;&lt;br&gt;
+Our project manager is experienced in managing remote teams and delivering first-rate projects successfully.|
+
+Access to the Latest Technologies and Platforms:
+Hand-picking qualified specialist in their field enables us to stay on top of emerging new technologies and to create future-proof solutions that will keep pace with today’s rapid technology shifts.|
+
+Bespoke Solutions:
+Our broad experience in working with remote developers allows us to assess each project’s unique requirements and find the correct skillset and best technology to suit your needs.|
+
+Faster Time-to-Market:
+Selecting a team with the right set of experience and skills to best match the project requirements allow for greater flexibility that increases productivity and saves time.|
+
+Reducing Cost of Development:
+Our scalable adaptive work model allows us to scale the operation to the requirements of each individual client, thus streamlining the development process to keep costs affordable.|</value>
   </data>
   <data name="TelNumber" xml:space="preserve">
     <value>+353 1 201 1041</value>

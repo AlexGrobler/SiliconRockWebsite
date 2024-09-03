@@ -55,7 +55,7 @@
 
 .solutions-headers {
     background-color: rgb(20, 103, 178);
-    background-image: linear-gradient(45deg, rgb(20, 103, 178), rgb(161, 255, 241));
+    background-image: linear-gradient(45deg, rgb(37, 84, 195), rgb(103, 246, 255));
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -93,7 +93,7 @@
 .about-img {
     height: 3vw;
     min-height: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .page-container {
@@ -179,8 +179,8 @@
     display: flex;
     background-color: white;
     flex-direction: column;
-    width: 22vw;
-    height: 15vw;
+    width: 20vw;
+    height: 14vw;
     min-height: 19em;
     min-width: 150px;
     border-radius: 15px;
@@ -194,7 +194,7 @@
     }
 
 .custom-card-text {
-    font-size: 1.4em;
+    font-size: 1.2em;
     justify-self: center;
     align-self: center;
     margin: 20px;
@@ -337,8 +337,8 @@
 
 @media screen and (min-width: 2100px) {
     .custom-card {
-        width: 18vw;
-        height: 14vw;
+        width: 16vw;
+        height: 13vw;
         min-height: 0em;
         min-width: 0px;
     }
